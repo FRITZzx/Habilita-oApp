@@ -13,11 +13,10 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v4
 
-    - name: Set up Docker Buildozer image and run build
+    - name: Build with Buildozer in Docker
       run: |
-        docker pull kivy/buildozer:py3
-        # roda o buildozer dentro do container, montando o workspace
-        docker run --rm -v "${{ github.workspace }}":/home/user/hostcwd -w /home/user/hostcwd kivy/buildozer:py3 buildozer -v android debug
+        docker pull kivy/buildozer
+        docker run --rm -v "${{ github.workspace }}":/home/user/hostcwd -w /home/user/hostcwd kivy/buildozer buildozer -v android debug
 
     - name: Upload APK artifact
       uses: actions/upload-artifact@v4
