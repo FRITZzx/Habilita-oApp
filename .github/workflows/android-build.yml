@@ -1,4 +1,4 @@
-name: Build APK (Native Buildozer)
+name: Build APK
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
           openjdk-11-jdk \
           unzip \
           zlib1g-dev \
-          libncurses5 \
+          libncurses6 \
           libstdc++6 \
           libffi-dev \
           libssl-dev \
