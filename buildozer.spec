@@ -41,3 +41,15 @@ android.ndk = 25b
 
 # (bool) Use --private data dir (recommended for quick testing)
 android.private_storage = True
+
+# Versão estável do Build-Tools (evita RC que trava no GitHub Actions)
+android.build_tools_version = 33.0.2
+
+# API do Android a ser usada
+android.api = 33
+
+# Outras configurações básicas
+android.sdk = 20
+android.ndk = 25b
+android.minapi = 21
+android.target = 33
